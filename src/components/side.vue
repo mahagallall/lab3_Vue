@@ -37,7 +37,7 @@
         </div>
         <div class="d-flex justify-content-between">
           <span>Active Classes:</span>
-          <span class="badge bg-success rounded-pill">5</span>
+          <span class="badge bg-success rounded-pill">0</span>
         </div>
       </div>
     </div>
@@ -81,13 +81,13 @@ export default {
 }
 
 .list-group-item.active {
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #29c7df;
+  border-color: #3415cf;
 }
 
 .card {
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
 }
 </style>

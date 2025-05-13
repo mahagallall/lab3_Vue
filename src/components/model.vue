@@ -104,19 +104,19 @@ export default {
           throw new Error(`Server responded with status: ${response.status}`);
         }
         
-        // Reset form
+        
         this.name = '';
         this.city = '';
         this.nameError = false;
         this.cityError = false;
         
-        // Close modal
+        
         document.querySelector('[data-bs-dismiss="modal"]').click();
         
-        // Trigger event to refresh student list
+        
         this.$emit('student-added');
         
-        // Show success alert
+        
         this.showAlert('Student added successfully!', 'success');
       } catch (err) {
         console.error("Error adding student:", err);
@@ -127,8 +127,8 @@ export default {
       }
     },
     showAlert(message, type = 'info') {
-      // You would implement this as needed
-      // Could be a custom toast or use third-party library
+      
+      
       alert(message);
     }
   }
@@ -153,7 +153,7 @@ export default {
 }
 
 .form-control:focus {
-  border-color: #0d6efd;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  border-color: #28e3e0;
+  box-shadow: 0 0 0 0.25rem rgba(14, 225, 215, 0.25);
 }
 </style>

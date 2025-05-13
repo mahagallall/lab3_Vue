@@ -89,13 +89,13 @@ table tr:hover {
 }
 
 button.btn-primary {
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #21e2db;
+  border-color: #0f010c;
   transition: all 0.3s ease;
 }
 
 button.btn-primary:hover {
-  background-color: #0b5ed7;
-  border-color: #0a58ca;
+  background-color: #da28bf;
+  border-color: #0e010c;
 }
 </style>

@@ -116,7 +116,7 @@
         </nav>
       </div>
 
-      <!-- Delete Confirmation Modal -->
+      
       <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true" ref="deleteModal">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -191,17 +191,17 @@ export default {
       return this.filteredStudents.slice(start, end);
     },
     displayedPages() {
-      // Show at most 5 page numbers
+      
       const pages = [];
       const totalPages = this.totalPages;
       
       if (totalPages <= 5) {
-        // Show all pages if there are 5 or fewer
+        
         for (let i = 1; i <= totalPages; i++) {
           pages.push(i);
         }
       } else {
-        // Always show current page, 2 before and 2 after if possible
+        
         const startPage = Math.max(1, this.currentPage - 2);
         const endPage = Math.min(totalPages, startPage + 4);
         
@@ -215,7 +215,7 @@ export default {
   },
   methods: {
     performSearch() {
-      // Reset to first page when searching
+      
       this.currentPage = 1;
     },
     clearSearch() {
@@ -229,7 +229,7 @@ export default {
     },
     confirmDelete(student) {
       this.studentToDelete = student;
-      // Show the modal using Bootstrap's JS API
+      
       const modal = new bootstrap.Modal(document.getElementById('deleteModal'));
       modal.show();
     },
@@ -247,17 +247,17 @@ export default {
           throw new Error(`Server responded with status: ${response.status}`);
         }
         
-        // Remove from local array
+        
         this.students = this.students.filter(s => s.id !== this.studentToDelete.id);
         
-        // Close modal
+        
         const modal = bootstrap.Modal.getInstance(document.getElementById('deleteModal'));
         modal.hide();
         
-        // Reset
+       
         this.studentToDelete = null;
         
-        // If current page is now empty, go to previous page
+        
         if (this.paginatedStudents.length === 0 && this.currentPage > 1) {
           this.currentPage--;
         }
@@ -269,11 +269,11 @@ export default {
       }
     },
     sortBy(field) {
-      // If clicking on the same field, toggle direction
+      
       if (this.sortField === field) {
         this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
       } else {
-        // New field, set to ascending
+        
         this.sortField = field;
         this.sortDirection = 'asc';
       }
@@ -329,13 +329,13 @@ export default {
 }
 
 .pagination .page-link {
-  color: #0d6efd;
+  color: #1ea9ef;
   border-color: #dee2e6;
 }
 
 .pagination .page-item.active .page-link {
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #1cc4e9;
+  border-color: #e323ca;
 }
 
 .btn-outline-secondary:hover {
